@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Computer Engineering Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="mode-toggle">
+    <label class="switch">
+      <input type="checkbox" id="modeToggle" />
+      <span class="slider"></span>
+    </label>
+    <span id="modeLabel">Light Mode</span>
+  </div>
+
+  <!-- Login -->
+  <div class="container" id="loginContainer">
+    <h2>Enter Your Name</h2>
+    <input type="text" id="username" placeholder="Your Name" />
+    <button onclick="startQuiz()">Start Quiz</button>
+  </div>
+
+  <!-- Quiz -->
+  <div class="container hidden" id="quizContainer">
+    <h2 id="welcomeMsg"></h2>
+    <div id="quizBox"></div>
+    <div class="navigation">
+      <button onclick="prevQuestion()" id="prevBtn">Previous</button>
+      <button onclick="nextQuestion()" id="nextBtn">Next</button>
+      <button onclick="submitQuiz()" id="submitBtn" class="hidden">Submit Quiz</button>
+    </div>
+  </div>
+
+  <!-- Result -->
+  <div class="container hidden" id="resultContainer">
+    <h2>Quiz Result</h2>
+    <p id="resultText"></p>
+    <button onclick="restartQuiz()">Retake Quiz</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
